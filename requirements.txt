@@ -39,6 +39,6 @@ visdom==0.1.8.9
 websocket-client==0.57.0
 Werkzeug==1.0.1
 --find-links https://download.pytorch.org/whl/torch_stable.html
-torch==1.6.0 
-torchvision==0.7.0
+torch==1.6.0+cpu 
+torchvision==0.7.0+cpu
 torchfile==0.1.0

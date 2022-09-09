@@ -42,7 +42,7 @@
     "LABEL_1": 1,
     "LABEL_2": 2
   },
-  "max_length": 200,
+  "max_length": 120,
   "max_position_embeddings": 1024,
   "min_length": 11,
   "model_type": "bart",

@@ -25,7 +25,7 @@ def bart_summarize(input_text, num_beams, num_words):
                                       no_repeat_ngram_size=3,
                                       length_penalty=2.0,
                                       min_length=int(num_words),
-                                      max_length=int(num_words),
+                                      max_length=200,
                                       early_stopping=True)
     output = [bart_tokenizer.decode(g, skip_special_tokens=True, clean_up_tokenization_spaces=False) for g in summary_ids]
     return output[0]
@@ -68,4 +68,4 @@ if __name__ == '__main__':
     bart_model.to(device)
     bart_model.eval()
 
-    app.run(host='127.0.0.1', debug=True, port=8000, use_reloader=False)
+    app.run(host='0.0.0.0', debug=False, port=8000, use_reloader=False)

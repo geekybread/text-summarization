@@ -9,13 +9,13 @@ jQuery(document).ready(function () {
 
     var slider2 = $('#num_beams')
     slider2.on('change mousemove', function (evt) {
-        $('#label_num_beams').text('# beam search: ' + slider2.val())
+        $('#label_num_beams').text('# no. of beam search: ' + slider2.val())
     })
 
     $('#btn-process').on('click', function () {
         input_text = $('#txt_input').val()
         model = $('#input_model').val()
-        num_words = $('#max_words').val()
+        num_words = $('#min_words').val()
         num_beams = $('#num_beams').val()
         $.ajax({
             url: '/predict',
